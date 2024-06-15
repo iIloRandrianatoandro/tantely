@@ -10,11 +10,14 @@ import java.util.Collection;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Cathegorie implements Serializable {
+public class Bureau implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    @OneToMany(mappedBy = "cathegorie")
-    private Collection<Film> films;
-
+    private String nomBureau;
+    private double longitude;
+    private double latitude;
+    private double altitude;
+    private String type;
+    @OneToMany(mappedBy = "bureau")
+    private Collection<Setrouve> setrouves;
 }

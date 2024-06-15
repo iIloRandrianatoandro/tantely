@@ -6,17 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Ville  implements Serializable {
+public class Piece implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String nomville;
-    private double longitude , latitude , altitude;
-    @OneToMany(mappedBy = "ville")
-    private Collection<Cinema> cinemas;
-
-
+    private Long id;
+    private String nomPiece;
+    private String photos;
+    @ManyToOne
+    private Service service;
 }

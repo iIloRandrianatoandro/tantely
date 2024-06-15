@@ -6,23 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Projection implements Serializable {
+public class Setrouve implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dateProjection;
-    private double prix;
+    private Date dateDemande;
     @ManyToOne
-    private Salle salle;
+    private Service service;
     @ManyToOne
-    private Film film;
-    @OneToMany(mappedBy = "projection")
-    private Collection<Ticket> tickets;
-    @ManyToOne //relation unidirectionnelle
-    private Seance seance;
-
+    private Bureau bureau;
 }

@@ -1,12 +1,10 @@
 package com.cod_eni.cod_eni.dao;
 
-import com.cod_eni.cod_eni.entites.Cathegorie;
-import com.cod_eni.cod_eni.entites.Cinema;
+import com.cod_eni.cod_eni.entites.Fichier;
+import com.cod_eni.cod_eni.entites.Lier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-//commentaire
 @RepositoryRestResource
-public interface CathegorieRepositorie extends JpaRepository<Cathegorie,Long> {
-    
+public interface LierRepositorie extends JpaRepository<Lier,Long> {
 }

@@ -6,19 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Salle implements Serializable {
+public class Fichier implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomSalle;
-    private int nombrePlace;
+    private String fichierPhotos;
     @ManyToOne
-    private Cinema cinema;
-    @OneToMany(mappedBy = "salle")
-    private Collection<Place> places;
-    @OneToMany(mappedBy = "salle")
-    private Collection<Projection> projections;
+    private Demande demande;
 }

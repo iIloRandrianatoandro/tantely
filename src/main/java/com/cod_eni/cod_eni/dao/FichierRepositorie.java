@@ -1,11 +1,10 @@
 package com.cod_eni.cod_eni.dao;
 
-import com.cod_eni.cod_eni.entites.Cinema;
-import com.cod_eni.cod_eni.entites.Ticket;
+import com.cod_eni.cod_eni.entites.Demande;
+import com.cod_eni.cod_eni.entites.Fichier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface TicketRepositorie extends JpaRepository<Ticket,Long> {
-    
+public interface FichierRepositorie extends JpaRepository<Fichier,Long> {
 }
